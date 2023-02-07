@@ -15,23 +15,23 @@ public class SalesManager {
         return max;
     }
 
-    public int average() {
-        int numMax = sales[0];
-        int numMin = sales[0];
-        int sumArr = 0;
-        for (int i = 0; i < sales.length; i++) {
-            if (sales[i] > numMax) {
-                numMax = sales[i];
+    public long average() {
+        long numMax = sales[0];
+        long numMin = sales[0];
+        long sumArr = 0;
+        for (long i = 0; i < sales.length; i++) {
+            if (sales[(int) i] > numMax) {
+                numMax = sales[(int) i];
             }
         }
-        for (int i = 0; i < sales.length; i++) {
-            if (sales[i] < numMin) {
-                numMin = sales[i];
+        for (long i = 0; i < sales.length; i++) {
+            if (sales[(int) i] < numMin) {
+                numMin = sales[(int) i];
             }
         }
-        int totalAverage = 0;
-        for (int i = 0; i < sales.length; i++) {
-            sumArr = sumArr + sales[i];
+        long totalAverage = 0;
+        for (long i = 0; i < sales.length; i++) {
+            sumArr = sumArr + sales[(int) i];
             {
                 totalAverage = (sumArr - numMin - numMax) / 3;
             }
